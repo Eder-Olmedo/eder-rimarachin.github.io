@@ -1,1 +1,1 @@
-innerHTML("Holis")
+document.appendChild("Buenas JS");
