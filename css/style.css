@@ -74,11 +74,11 @@ span {
   width: 40px;
 }
 
-.about-me{
+.about-me, .skills{
     border: 1px solid black;
     padding: 5vh 10vw;
 }
 
-.about-me p{
+.about-me, .skills p{
     text-align: justify;
 }
