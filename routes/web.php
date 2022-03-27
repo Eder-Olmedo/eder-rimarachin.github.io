@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return 'Hello World';
+// });
+
+    Route::get('/', function () {
+        return view('index')->with('title', 'Home');
+    });
+
+    Route::get('/about-me', function () {
+        return view('about')->with('title', 'About');
+    });
+
+    Route::get('/resume', function () {
+        return view('resume')->with('title', 'Resume');
+    });
+
+    Route::get('/projects', function () {
+        return view('projects')->with('title', 'Projects');
+    });
+    Route::get('/contact', function () {
+        return view('contact')->with('title', 'Contact');
+    });
+
+
+
+// Route::resource('/Home', HomeController::class);
