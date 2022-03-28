@@ -1,5 +1,7 @@
 @extends('base.layout')
 
 @section('content')
-<h2>inddexx</h2>
+<h1>
+    sda
+</h1>
 @endsection

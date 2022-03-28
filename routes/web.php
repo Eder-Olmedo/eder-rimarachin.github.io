@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,29 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return 'Hello World';
-// });
+// Route views controller for the home page
 
-    Route::get('/', function () {
-        return view('index')->with('title', 'Home');
-    });
+Route::get('/', [HomeController::class, 'index'])->name('index');
 
-    Route::get('/about-me', function () {
-        return view('about')->with('title', 'About');
-    });
+Route::get('/resume', [HomeController::class,'resume'])->name('resume');
 
-    Route::get('/resume', function () {
-        return view('resume')->with('title', 'Resume');
-    });
+Route::get('/project', [HomeController::class, 'projects'])->name('project');
 
-    Route::get('/projects', function () {
-        return view('projects')->with('title', 'Projects');
-    });
-    Route::get('/contact', function () {
-        return view('contact')->with('title', 'Contact');
-    });
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
+//Route views controller for the projects page
 
+Route::resource('/projects', ProjectController::class);
 
-// Route::resource('/Home', HomeController::class);
+//Route for logged in users
+Auth::routes();
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
