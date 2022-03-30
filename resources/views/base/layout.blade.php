@@ -24,13 +24,15 @@
 </head>
 
 <body class="hold-transition sidebar-mini sidebar-collapse">
-    <div class="wrapper">
-        @include('base.components.navbar')
-        <div class="content-wrapper">
-            @yield('content')
+    <header>
+        <div style="z-index: 100">
+            @include('base.components.navbar')
         </div>
-        @include('base.components.footer')
+    </header>
+    <div style="margin-top: 56px;">
+            @yield('content')
     </div>
+    @include('base.components.footer')
     @include('base.resource.script')
     @yield('scripts')
 </body>

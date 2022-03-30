@@ -25,9 +25,13 @@ Route::get('/project', [HomeController::class, 'projects'])->name('project');
 
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 
+
 //Route views controller for the projects page
 
 Route::resource('/projects', ProjectController::class);
+
+
+Route::post('/projects', [ProjectController::class, 'status'])->name('projects-status');
 
 //Route for logged in users
 Auth::routes();

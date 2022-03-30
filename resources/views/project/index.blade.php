@@ -36,11 +36,12 @@
                                     <tr>
                                         <th>No</th>
 
-										<th>User Id</th>
+										{{-- <th>User Id</th> --}}
 										<th>Porject Name</th>
 										<th>Project Description</th>
 										<th>Project Image</th>
 										<th>Project Link</th>
+                                        <th>Status</th>
 
                                         <th></th>
                                     </tr>
@@ -50,19 +51,21 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
-											<td>{{ $project->user_id }}</td>
+											{{-- <td>{{ $project->user_id }}</td> --}}
 											<td>{{ $project->porject_name }}</td>
 											<td>{{ $project->project_description }}</td>
 											<td>{{ $project->project_image }}</td>
 											<td>{{ $project->project_link }}</td>
+                                            <td>{{ $project->status }}</td>
 
                                             <td>
                                                 <form action="{{ route('projects.destroy',$project->id) }}" method="POST">
+                                                    {{-- <a class="btn btn-sm btn-info " href="{{ route('projects-status',['id'=>$project->id]) }}"><i class="fa fa-fw fa-disable"></i> Status</a> --}}
                                                     <a class="btn btn-sm btn-primary " href="{{ route('projects.show',$project->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('projects.edit',$project->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Status</button>
                                                 </form>
                                             </td>
                                         </tr>

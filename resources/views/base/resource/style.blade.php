@@ -391,9 +391,15 @@
         }
     }
 
+
     nav.navbar {
         background-color: #00509d;
         padding: 0.5rem 1rem;
+        position: -webkit-sticky;
+        position: sticky;
+        width: 100%;
+        position: fixed;
+        top: 0;
     }
 
     /* NavBar */
@@ -403,17 +409,80 @@
 
     footer {
         min-height: 70px;
-        background-color: #191919;
+        /* background-color: #191919;
         background-image: -moz-linear-gradient(top, #191919, #000000);
         background-image: -o-linear-gradient(top, #191919, #000000);
         background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #191919), color-stop(1, #000000));
         background-image: -webkit-linear-gradient(#191919, #000000);
         background-image: linear-gradient(top, #191919, #000000);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#191919', endColorStr='#000000');
-        border-top: 1px solid rgba(50, 50, 50, 0.3);
+        border-top: 1px solid rgba(50, 50, 50, 0.3); */
         width: 100%;
         position: fixed;
         bottom: 0;
+    }
+
+    .box-profile {
+        min-width: 300px;
+        max-width: 600px;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        height: 400px;
+    }
+
+    .line {
+        border-top: 2px solid blue;
+        height: 2px;
+        max-width: 50px;
+        padding: 0;
+        margin: 20px auto 0 auto;
+    }
+
+    .caj1 {
+        width: 50%;
+        height: 400px;
+        text-align: center;
+        padding-top: 60px;
+        background-color: #FAF8D4;
+    }
+
+    .caj1 img {
+        width: 150px;
+        border-radius: 95%;
+    }
+
+    .caj1 h1 {
+        font-family: "arial black";
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 20px;
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .caj1 p {
+        font-family: "arial";
+        font-size: 25px;
+        padding-top: 10px;
+        width: 110px;
+        margin: 0 auto;
+    }
+    .social{
+        margin: 0 auto;
+        background-color: #00509d;
+        margin-top: 9px;
+        height: 44px;
+        bottom: 0;
+    }
+
+    .caj2 {
+        width: 50%;
+        height: 400px;
+        background-color: #EBDCCB;
+        padding: 15px;
     }
 
 </style>

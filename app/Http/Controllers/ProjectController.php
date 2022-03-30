@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use DB;
 
 /**
  * Class ProjectController
@@ -98,6 +99,19 @@ class ProjectController extends Controller
             ->with('success', 'Project updated successfully');
     }
 
+    public function status(Request $request, $id)
+    {
+        $project = Project::find($id);
+        if ($project->status == 'yes') {
+            $project->status = 'no';
+        } else {
+            $project->status = 'yes';
+        }
+        $project->save();
+        return redirect()->route('projects.index', compact('project'))
+            ->with('success', 'Project status changed successfully');
+    }
+
     /**
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
@@ -105,9 +119,19 @@ class ProjectController extends Controller
      */
     public function destroy($id)
     {
-        $project = Project::find($id)->delete();
+        // $project = Project::find($id)->delete();
 
-        return redirect()->route('projects.index')
-            ->with('success', 'Project deleted successfully');
+        // return redirect()->route('projects.index')
+        //     ->with('success', 'Project deleted successfully');
+
+        $project = Project::find($id);
+        if ($project->status == 'yes') {
+            $project->status = 'no';
+        } else {
+            $project->status = 'yes';
+        }
+        $project->save();
+        return redirect()->route('projects.index', compact('project'))
+            ->with('success', 'Project status changed successfully');
     }
 }

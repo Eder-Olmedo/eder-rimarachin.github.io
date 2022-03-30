@@ -25,6 +25,10 @@
                             {{ $project->user_id }}
                         </div>
                         <div class="form-group">
+                            <strong>Porject Status</strong>
+                            {{ $project->status }}
+                        </div>
+                        <div class="form-group">
                             <strong>Porject Name:</strong>
                             {{ $project->porject_name }}
                         </div>

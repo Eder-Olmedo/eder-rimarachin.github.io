@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $user_id
+ * @property $status
  * @property $porject_name
  * @property $project_description
  * @property $project_image
@@ -22,13 +23,14 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Project extends Model
 {
-    
+
     static $rules = [
-		'user_id' => 'required',
-		'porject_name' => 'required',
-		'project_description' => 'required',
-		'project_image' => 'required',
-		'project_link' => 'required',
+		'user_id' => 'nullable|integer',
+        'status' => 'nullable',
+		'porject_name' => 'nullable|string|max:255',
+		'project_description' => 'nullable',
+		'project_image' => 'nullable',
+		'project_link' => 'nullable',
     ];
 
     protected $perPage = 20;
@@ -38,7 +40,7 @@ class Project extends Model
      *
      * @var array
      */
-    protected $fillable = ['user_id','porject_name','project_description','project_image','project_link'];
+    protected $fillable = ['user_id','status','porject_name','project_description','project_image','project_link'];
 
 
     /**
@@ -48,6 +50,8 @@ class Project extends Model
     {
         return $this->hasOne('App\Models\User', 'id', 'user_id');
     }
-    
+
+
+
 
 }

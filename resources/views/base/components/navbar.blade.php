@@ -1,5 +1,5 @@
-<div class="wrapper">
-    <nav class="navbar navbar-expand-lg navbar-dark text-white"  >
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark text-white">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
             class="bi bi-backspace-reverse-fill" viewBox="0 0 16 16" style="color:white;">
             <path
