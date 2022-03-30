@@ -25,7 +25,7 @@
 
 <body class="hold-transition sidebar-mini sidebar-collapse">
     <header>
-        <div class="sticky-top"> style="z-index:-2; ">
+        <div>
             @include('base.components.navbar')
         </div>
     </header>

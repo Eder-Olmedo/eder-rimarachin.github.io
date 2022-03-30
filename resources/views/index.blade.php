@@ -1,20 +1,21 @@
 @extends('base.layout')
 
 @section('content')
-    <div class="d-flex flex-wrap " style="position: relative;">
-        <div class=" d-flex"
-            style="width:50%; min-width:400px; height: 80vh; background-color:coral;">asdad</div>
-        <div class="d-flex" style="width:50%; min-width:400px; background-color:gray;">ssss</div>
-        <div class="box-profile d-flex flex-wrap align-content-around">
+    <div class="cp3 d-flex flex-wrap" style="position: relative; align-items: stretch;">
+        <div class="lrt"></div>
+        <div class="llt"></div>
+        <div class="box-profile d-flex flex-wrap align-middle">
             <div class="d-flexbox caj1">
                 <img src="{{ asset('assets/img/Joaquin.jpg') }}" alt="profile-img">
                 <h1>
                     Eder Rimarachin
                 </h1>
                 <div class="line"></div>
-                <p>
-                    Developer
-                </p>
+                <div>
+                    <p>
+                        Developer
+                    </p>
+                </div>
                 <div class="social">
                     <section class="p-1">
                         {{-- <!-- Facebook -->
@@ -47,15 +48,13 @@
             <div class="d-flexbox caj2">
                 <h1> Hello!</h1>
                 <h3> Soy Joaquin, Y no sé que estoy haciendo</h3>
-                <div class="Repro d-flex justify-content-around">
+                <div class="Repro ">
                     <a id="resume" href="{{ route('resume') }}">Resume</a>
                     <a id="project" href="{{ route('project') }}">Projects</a>
                 </div>
                 <p>
                     I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or
-                    double click me to add your own content and make changes to the font.
-                </p>
-                <p>
+                    double click me to add your own content and make changes to the font.<br/>
                     I’m a great place for you to tell a story and let your users know a little more about you.
                 </p>
             </div>

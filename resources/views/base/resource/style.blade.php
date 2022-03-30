@@ -392,10 +392,11 @@
     }
 
 
-    .aimg{
-        margin:0;
-        padding:0;
+    .aimg {
+        margin: 0;
+        padding: 0;
     }
+
     nav.navbar {
         background-color: #00509d;
         padding: 0.5rem 1rem;
@@ -404,6 +405,7 @@
         width: 100%;
         position: fixed;
         top: 0;
+        z-index: 1030;
     }
 
     /* NavBar */
@@ -422,19 +424,42 @@
         filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#191919', endColorStr='#000000');
         border-top: 1px solid rgba(50, 50, 50, 0.3); */
         width: 100%;
-        position: fixed;
         bottom: 0;
+        position: fixed;
+
+    }
+
+    .lrt {
+        min-width: 45%;
+        height: 80vh;
+        background-color: coral;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        padding: 0.5rem;
+    }
+
+    .llt {
+        position: relative;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 55%;
+        background-color: gray;
     }
 
     .box-profile {
         min-width: 300px;
         max-width: 600px;
-        position: absolute;
-        top: 60px;
         left: 0;
         right: 0;
-        margin: 0 auto;
+        margin: 9% auto;
         height: 400px;
+        position: fixed;
+        position: -webkit-sticky;
+        z-index: 1;
+
+
     }
 
     .line {
@@ -481,6 +506,7 @@
         margin-top: 9px;
         height: 44px;
         bottom: 0;
+        margin-bottom: 0;
     }
 
     .caj2 {
@@ -498,6 +524,8 @@
     /* links into the presentation */
     .Repro {
         margin: 5px;
+        display: flex;
+        justify-content: space-around;
     }
 
     .Repro #resume {
@@ -507,7 +535,6 @@
         padding: 0 10px;
         background-color: #294C60;
         color: white
-
     }
 
     .Repro #resume:hover {
@@ -526,6 +553,143 @@
     .Repro #project:hover {
         background-color: #294C60;
         color: white;
+    }
+
+    /* query for mobile devices */
+
+    @media only screen and (max-width: 742px) {
+
+        /* div 1 right */
+        .box-profile {
+            margin: 15% auto;
+        }
+
+
+        .lrt {
+            width: 100vw;
+            height: 40vh;
+            background-color: coral;
+            position: relative;
+
+        }
+
+        .llt {
+            width: 100vw;
+            height: calc(100vh - 60vh);
+            background-color: gray;
+            position: relative;
+
+        }
+
+    }
+
+    @media only screen and (max-width:640px) {
+        .box-profile {
+            justify-content: center;
+            margin: 15% auto;
+            position: absolute;
+
+        }
+
+        .caj1 p {
+            display: none;
+        }
+
+        .social {
+            margin: 0 auto;
+            background-color: #00509d;
+            margin-top: 50px;
+            height: 44px;
+            position: relative;
+            bottom: 0;
+        }
+
+        .Repro {
+            display: flex;
+            margin-top: -250px;
+            position: relative;
+            justify-content: space-evenly;
+
+        }
+
+        .caj1 {
+            min-width: 300px;
+            width: 60vw;
+            background-color: #FAF8D4;
+            position: absolute;
+            margin: 0 auto;
+        }
+
+        .caj2 {
+            min-width: 300px;
+            width: 60vw;
+            background-color: #EBDCCB;
+            position: fixed;
+            position: absolute;
+            top: 400px;
+            margin: 0 auto;
+
+        }
+
+        .caj2 p {
+            margin-top: 250px;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        .lrt {
+            width: 100vw;
+            height: 45vh;
+            background-color: coral;
+            position: relative;
+
+        }
+
+        .llt {
+            width: 100vw;
+            height: 85vh;
+            background-color: gray;
+            position: relative;
+
+        }
+
+        footer {
+            position: relative;
+        }
+    }
+
+    @media only screen and (max-width:500px) {
+        .box-profile {
+            justify-content: center;
+            margin:20% auto;
+            position: absolute;
+        }
+
+        .caj1 {
+            width: 80vw;
+            background-color: #FAF8D4;
+        }
+
+        .caj2 {
+            width: 80vw;
+            background-color: #EBDCCB;
+        }
+
+        .lrt {
+            width: 100vw;
+            height: 40vh;
+            background-color: coral;
+        }
+
+        .llt {
+            width: 100vw;
+            height: calc(100% - query(100vh - 60vh));
+            background-color: gray;
+        }
+
+        footer {
+            position: relative;
+        }
     }
 
 </style>
