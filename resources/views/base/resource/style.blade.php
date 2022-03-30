@@ -392,6 +392,10 @@
     }
 
 
+    .aimg{
+        margin:0;
+        padding:0;
+    }
     nav.navbar {
         background-color: #00509d;
         padding: 0.5rem 1rem;
@@ -408,7 +412,7 @@
     }
 
     footer {
-        min-height: 70px;
+        /* min-height: 70px; */
         /* background-color: #191919;
         background-image: -moz-linear-gradient(top, #191919, #000000);
         background-image: -o-linear-gradient(top, #191919, #000000);
@@ -426,7 +430,7 @@
         min-width: 300px;
         max-width: 600px;
         position: absolute;
-        top: 50px;
+        top: 60px;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -470,7 +474,8 @@
         width: 110px;
         margin: 0 auto;
     }
-    .social{
+
+    .social {
         margin: 0 auto;
         background-color: #00509d;
         margin-top: 9px;
@@ -483,6 +488,44 @@
         height: 400px;
         background-color: #EBDCCB;
         padding: 15px;
+    }
+
+    .caj2 h1 {
+        font-family: "arial black";
+        font-size: 50px;
+    }
+
+    /* links into the presentation */
+    .Repro {
+        margin: 5px;
+    }
+
+    .Repro #resume {
+        text-decoration: none;
+        border: 1px solid #294C60;
+        border-radius: 10px;
+        padding: 0 10px;
+        background-color: #294C60;
+        color: white
+
+    }
+
+    .Repro #resume:hover {
+        background-color: #fff;
+        color: #294C60;
+    }
+
+    .Repro #project {
+        text-decoration: none;
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 0 10px;
+        background-color: white;
+    }
+
+    .Repro #project:hover {
+        background-color: #294C60;
+        color: white;
     }
 
 </style>

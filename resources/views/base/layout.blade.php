@@ -25,11 +25,11 @@
 
 <body class="hold-transition sidebar-mini sidebar-collapse">
     <header>
-        <div style="z-index: 100">
+        <div class="sticky-top"> style="z-index:-2; ">
             @include('base.components.navbar')
         </div>
     </header>
-    <div style="margin-top: 56px;">
+    <div>
             @yield('content')
     </div>
     @include('base.components.footer')
