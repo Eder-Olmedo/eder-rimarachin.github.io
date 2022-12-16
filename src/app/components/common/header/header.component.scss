@@ -1,0 +1,103 @@
+*{
+  font-size: 1.2rem;
+}
+header {
+  nav {
+    background-color: var(--black) !important;
+    border-bottom: 1px solid var(--white-color);
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+    .bodyContent {
+      .nameLogo {
+        display: contents;
+        margin: 5px;
+        text-decoration: none;
+        color: white;
+        .logo_img {
+          width: 50px;
+          background-color: #fff;
+          border-radius: 10px;
+        }
+        .logo {
+          margin-left: 0.5rem;
+
+          &:hover,
+          &:focus {
+            transform: scale(1.01);
+            transition: 0.3s;
+          }
+        }
+      }
+     
+      button {
+        background-color: var(--white-color);
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        span {
+          picture {
+            svg {
+              width: 30px;
+              path {
+                fill: var(--orange-color);
+              }
+            }
+          }
+          .img-on {
+            display: flex;
+          }
+        }
+      }
+      .linkCanva {
+        ul {
+          text-align: center;
+          li {
+            cursor: pointer;
+            a {
+              color: var(--violet-color) !important;
+              &:hover,
+              &:focus {
+                transform: scale(1.01);
+                transition: 0.3s;
+                color: var(--primary-color) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .offcanvas {
+      .offcanvas-header {
+        .offcanvas-title {
+          font-style: italic;
+        }
+        .btnClose {
+          span {
+            picture {
+              svg {
+                width: 30px;
+                path {
+                  fill: var(--orange-color);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#btn-back-to-top{
+  position: fixed;
+  bottom: 3vh;
+  right: 3vh;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--black);
+  visibility: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.4);
+  z-index: 12;
+  border: none;
+}

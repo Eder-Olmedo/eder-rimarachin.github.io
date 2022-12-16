@@ -1,0 +1,176 @@
+.presentation {
+  background: -moz-linear-gradient(
+    172deg,
+    rgba(243, 17, 242, 1) 0%,
+    rgba(0, 188, 212, 1) 50%,
+    rgba(238, 130, 238, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    172deg,
+    rgba(243, 17, 242, 1) 0%,
+    rgba(0, 188, 212, 1) 50%,
+    rgba(238, 130, 238, 1) 100%
+  );
+  background: -o-linear-gradient(
+    172deg,
+    rgba(243, 17, 242, 1) 0%,
+    rgba(0, 188, 212, 1) 50%,
+    rgba(238, 130, 238, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee82ee', endColorstr='#F311F2', GradientType=1 );
+  background: -ms-linear-gradient(
+    172deg,
+    rgba(243, 17, 242, 1) 0%,
+    rgba(0, 188, 212, 1) 50%,
+    rgba(238, 130, 238, 1) 100%
+  );
+  background: linear-gradient(
+    172deg,
+    rgba(243, 17, 242, 1) 0%,
+    rgba(0, 188, 212, 1) 50%,
+    rgba(238, 130, 238, 1) 100%
+  );
+  .container {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+    .cardProfile {
+      max-width: 700px;
+      display: flex;
+      flex-direction: row;
+      border-radius: 5px 50px 20px 5px;
+      .imfProfile {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        .img-fluid {
+          border-radius: 2%;
+        }
+      }
+    }
+    .col {
+      .card-body {
+        .card-title {
+          font-size: 2.5rem;
+          margin: 0;
+        }
+        h4 {
+          i {
+            b {
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .card-text {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+.bodyCard {
+  background-color: var(--gray);
+  display: flex;
+  .cardsInfo {
+    max-width: 968px;
+    .card {
+      margin: 50px 0;
+      padding: 40px 20px;
+      border-radius: 20px;
+      .row {
+        display: flex;
+        flex-direction: row;
+        .card-body {
+          font-family: var(--fontFamily4);
+          .card-title {
+            font-weight: 900;
+            font-size: 2.5rem;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgb(215, 213, 213);
+          }
+          .card-text {
+            text-align: justify;
+            font-size: 1rem;
+          }
+        }
+      }
+      &:hover,
+      &:focus {
+        border: 2px solid var(--primary-color);
+        transform: scale(1.01);
+        transition: 0.5s;
+      }
+    }
+    .tech {
+      display: flex;
+      border: 1px;
+      background: transparent;
+      text-align: center;
+      flex-direction: row;
+      .techCard {
+        .card-title {
+          font-weight: 900;
+          font-size: 2rem;
+          border-bottom: 1px solid rgb(215, 213, 213);
+        }
+        .bTech {
+          ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            text-align: center;
+            li {
+              .cTech {
+                display: grid;
+                justify-content: center;
+                text-align: center;
+                margin: 5px auto;
+                padding: 10px 0;
+                width: 80px;
+                height: 120px;
+                img {
+                  margin: 0 auto;
+                  width: 40px;
+                }
+                strong {
+                  span {
+                    background-color: var(--orange-color);
+                    color: var(--white-color);
+                    border-radius: 5px;
+                    font-size: 13px;
+                    display: flex;
+                    justify-content: center;
+                    width: 99%;
+                  }
+                }
+                &:hover,
+                &:focus {
+                  border: 2px solid var(--primary-color);
+                  border-radius: 10%;
+                  transform: scale(1.01);
+                  transition: 0.3s;
+                  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.6);
+                }
+              }
+            }
+          }
+        }
+      }
+      &:hover,
+      &:focus {
+        border: none;
+        transform: none;
+        transition: 0s;
+      }
+    }
+  }
+}
+.btnCV {
+  background-color: var(--violet-color);
+  color: var(--black);
+  font-weight: bold;
+  cursor: pointer;
+}
