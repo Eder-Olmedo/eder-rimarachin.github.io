@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   public mybutton: any;
 
   ngOnInit(): void {
-    
+
   }
 
   topFunction() {
