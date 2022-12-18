@@ -1,4 +1,4 @@
-<header >
+<header>
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container bodyContent">
       <a class="nameLogo" routerLink="">
@@ -53,8 +53,9 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                [routerLinkActive]="'active'"
                 routerLink="/"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
                 data-bs-dismiss="offcanvas"
               >
                 About me
@@ -63,8 +64,9 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                [routerLinkActive]="'active'"
                 routerLink="/education"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
                 data-bs-dismiss="offcanvas"
               >
                 Education
@@ -73,8 +75,9 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                [routerLinkActive]="'active'"
                 routerLink="/projects"
+                routerLinkActive="active"
+                ariaCurrentWhenActive="page"
                 data-bs-dismiss="offcanvas"
               >
                 Projects
