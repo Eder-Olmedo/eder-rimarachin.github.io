@@ -8,12 +8,22 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'education', component: EducationComponent },
   { path: 'projects', component: ProjectsComponent },
-  { path: '**', component: HomeComponent }
+  {
+    path: '**', component: HomeComponent
+  },
+  {
+    path: '',
+    redirectTo: '/',
+    pathMatch: 'full'
+  }
+
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    anchorScrolling: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
