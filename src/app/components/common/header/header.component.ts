@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  public LOGO = "../../../assets/img/logo.png";
+  public LOGO = "./assets/img/logo.png";
   public mybutton: any;
 
   ngOnInit(): void {

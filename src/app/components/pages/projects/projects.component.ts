@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  public PORTFOLIO = "../../../assets/img/portfolio_eder_rimarachin.png";
+  public PORTFOLIO = "./assets/img/portfolio_eder_rimarachin.png";
 
   ngOnInit(): void {
 

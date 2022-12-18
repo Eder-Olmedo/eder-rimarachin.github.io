@@ -5,24 +5,17 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { ProjectsComponent } from './components/pages/projects/projects.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'education', component: EducationComponent },
   { path: 'projects', component: ProjectsComponent },
-  {
-    path: '**', component: HomeComponent
-  },
-  {
-    path: '',
-    redirectTo: '/',
-    pathMatch: 'full'
-  }
-
-
+  { path: '**', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    anchorScrolling: 'enabled'
+    useHash: true
+
   })],
   exports: [RouterModule]
 })
