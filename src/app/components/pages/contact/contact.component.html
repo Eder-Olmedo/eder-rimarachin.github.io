@@ -1,0 +1,131 @@
+<div class="container">
+  <div class="contact-me">
+    <div class="contact-container">
+      <h2>
+        Contact Me
+        <span role="img" aria-label="waving-hand-sing">👋</span>
+      </h2>
+      <hr />
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">
+            <span role="img" aria-label="man">🙍</span> Full Name
+          </label>
+          <input
+            placeholder="Enter your full name"
+            type="text"
+            name="name"
+            class="form-control"
+            formControlName="name"
+            required
+          />
+          <small
+            class="form-text text-muted alert"
+            *ngIf="
+              f['name'].errors &&
+              f['name'].invalid &&
+              (f['name'].dirty || f['name'].touched)
+            "
+          >
+            <span
+              role="img"
+              *ngIf="f['name'].invalid"
+              aria-label="warning"
+              >⚠️</span
+            >
+            Required
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="celphone">
+            <span role="img" aria-label="celphone">📲</span> Cellular contact
+          </label>
+          <input
+            placeholder="Enter a contact number"
+            type="text"
+            name="celphone"
+            class="form-control"
+            value=""
+            maxlength="15"
+            formControlName="cellular"
+            (keypress)="numberUp($event)"
+          />
+          <small
+            class="form-text text-muted alert"
+            *ngIf="
+              f['cellular'].errors &&
+              f['cellular'].invalid &&
+              (f['cellular'].dirty || f['cellular'].touched)
+            "
+          >
+            <span role="img" aria-label="warning">⚠️</span>
+            Required
+          </small>
+          <small class="form-text text-muted d-none">
+            <span role="img" aria-label="incorrect">❌</span>
+            Nine digits required
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="email">
+            <span role="img" aria-label="mailing">📧</span> Enter your e-mail
+            <small class="text-muted">(Optional)</small></label
+          >
+          <input
+            placeholder="Enter your e-mail"
+            type="text"
+            name="email"
+            class="form-control"
+            value=""
+            formControlName="email"
+          />
+          <small
+            class="form-text text-muted alert"
+            *ngIf="
+              f['email'].errors &&
+              f['email'].invalid &&
+              (f['email'].dirty || f['email'].touched)
+            "
+          >
+            <span role="img" aria-label="incorrect">❌</span>
+            Invalid invalid format
+          </small>
+        </div>
+        <div class="form-group">
+          <label for="message">
+            <span role="img" aria-label="writing-hand">✍</span>
+            Data that you consider important
+          </label>
+          <textarea
+            placeholder="Write down the data you consider important"
+            name="message"
+            class="form-control"
+            formControlName="data_add"
+          >
+          </textarea>
+          <small
+            class="form-text text-muted alert"
+            *ngIf="
+              f['data_add'].errors &&
+              f['data_add'].invalid &&
+              (f['data_add'].dirty || f['data_add'].touched)
+            "
+          >
+            <span role="img" aria-label="warning">⚠️</span> Required</small
+          >
+        </div>
+        <div class="form-group d-grid">
+          <button type="submit" class="btnSend btn btn-primary">Send</button>
+        </div>
+      </form>
+      <div class="mt-1">
+        <div class="form-group text-center">
+          <small class="text-primary">
+            This form will require an active WhatsApp application
+            <span role="img" aria-label="celphone">📱 </span>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

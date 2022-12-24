@@ -173,8 +173,12 @@
   color: var(--black);
   font-weight: bold;
   cursor: pointer;
+  a {
+    span {
+      color: white;
+    }
+  }
 }
-.title-about em
-{
+.title-about em {
   font-size: 2.5rem;
 }

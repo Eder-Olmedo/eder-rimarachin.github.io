@@ -8,6 +8,8 @@ import { FooterComponent } from './components/common/footer/footer.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { EducationComponent } from './components/pages/education/education.component';
 import { ProjectsComponent } from './components/pages/projects/projects.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { ProjectsComponent } from './components/pages/projects/projects.componen
     FooterComponent,
     HomeComponent,
     EducationComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,5 +18,6 @@ export class HomeComponent {
   public KRAKEN = "./assets/img/icon_gitkraken.png";
   public PHPSTORM = "./assets/img/icon_phpstorm.png";
   public VSCODE = "./assets/img/icon_vscode.png";
+  public CV = "./assets/cv/CV_Eder-Rimarachin.pdf";
 
 }
