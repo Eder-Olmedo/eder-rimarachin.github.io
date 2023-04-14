@@ -1,22 +1,20 @@
-*{
-  font-size: 1.2rem;
-}
 header {
   nav {
-    background-color: var(--black) !important;
-    border-bottom: 1px solid var(--white-color);
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.6);
+    background-color: var(--blue) !important;
+    height: 120px;
+    font-size: .8rem;
     .bodyContent {
       .nameLogo {
         display: contents;
         margin: 5px;
         text-decoration: none;
-        color: white;
+        color: var(--gray-dark);
+
         .logo_img {
-          width: 50px;
-          background-color: #fff;
+          width: 40px;
           border-radius: 10px;
         }
+
         .logo {
           margin-left: 0.5rem;
 
@@ -27,56 +25,83 @@ header {
           }
         }
       }
-     
+
       button {
         background-color: var(--white-color);
-        padding: 5px;
-        border-radius: 10px;
+        padding: 3px;
+        border-radius: 5px;
         cursor: pointer;
+
         span {
           picture {
             svg {
               width: 30px;
+
               path {
                 fill: var(--orange-color);
               }
             }
           }
+
           .img-on {
             display: flex;
           }
         }
       }
+
       .linkCanva {
         ul {
           text-align: center;
+
           li {
-            cursor: pointer;
+            user-select: none;
+
             a {
-              color: var(--violet-color) !important;
+              color: var(--white-color);
+              font-size: 0.8rem;
+              span {
+                color: var(--green);
+              }
+
               &:hover,
               &:focus {
-                transform: scale(1.01);
-                transition: 0.3s;
-                color: var(--primary-color) !important;
+                color: var(--green);
               }
+            }
+          }
+
+          button {
+            background-color: transparent;
+            color: var(--green);
+            margin: 0 10px;
+            padding: 5px 20px;
+            border: 1px solid var(--green);
+
+            &:hover,
+            &:focus {
+              background-color: var(--bs-green);
             }
           }
         }
       }
     }
+
     .offcanvas {
+      background-color: var(--black);
+
       .offcanvas-header {
         .offcanvas-title {
           font-style: italic;
         }
+
         .btnClose {
           span {
             picture {
               svg {
-                width: 30px;
+                width: 100%;
+
                 path {
-                  fill: var(--orange-color);
+                  fill: var(--green);
                 }
               }
             }
@@ -86,18 +111,96 @@ header {
     }
   }
 }
-#btn-back-to-top{
+
+.lateral {
   position: fixed;
-  bottom: 3vh;
-  right: 3vh;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 50%;
-  background-color: var(--primary-color);
-  color: var(--black);
-  visibility: visible;
-  cursor: pointer;
-  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.4);
-  z-index: 12;
-  border: none;
+  z-index: 1;
+  display: flex;
+
+  .social {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 10vw;
+    background-color: var(--blue);
+
+    section {
+      display: flex;
+      flex-direction: column;
+
+      .socialBox {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+          display: flex;
+          
+          picture {
+            border-radius: 50%;
+
+            padding: 10px;
+            margin: 5px;
+
+            svg {
+              width: 20px;
+              height: 20px;
+
+              path {
+                fill: var(--green);
+              }
+            }
+
+            &:hover,
+            &:focus {
+              background-color: var(--black);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: var(--blue);
+    width: 10vw;
+
+    section {
+      display: flex;
+      flex-direction: column;
+
+      .socialMail {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .mail {
+          padding-bottom: 20px;
+        }
+
+        a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          writing-mode: vertical-lr;
+          text-decoration: none;
+          color: var(--green);
+          font-size: .9rem;
+        }
+      }
+    }
+  }
+}
+
+.line-box {
+  border-left: 2px solid var(--gray-dark);
+  color: var(--blue);
+  height: 120px;
+  margin-top: 20px;
 }

@@ -1,19 +1,23 @@
 footer {
-  background-color: var(--violet-color) !important;
-  color: var(--white-color) !important;
+  
+  color: var(--white-color);
+  width: 100%;
   section {
+    background-color: var(--black);
+
     .socialBox {
       display: flex;
       flex-direction: row;
       margin: 0 auto;
+
       a {
         display: flex;
-
         picture {
           border-radius: 50%;
           background-color: white;
           padding: 10px;
           margin: 5px;
+
           svg {
             width: 30px;
             height: 30px;
@@ -31,10 +35,12 @@ footer {
       }
     }
   }
+
   .linkAccess {
     display: flex;
     justify-content: center;
     text-align: center;
+
     div {
       div {
         div {
@@ -42,6 +48,7 @@ footer {
             a {
               font-weight: bold;
               text-decoration: none;
+
               &:hover,
               &:focus {
                 color: var(--black) !important;
@@ -49,14 +56,14 @@ footer {
             }
           }
         }
+
         .logo_box {
           display: flex;
           margin: 0 auto;
           justify-content: center;
           vertical-align: middle;
+
           a {
-            
-           
             .logo_img {
               width: 100px;
               height: 100px;
