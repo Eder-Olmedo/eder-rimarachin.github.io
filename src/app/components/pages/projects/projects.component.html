@@ -1,107 +1,65 @@
-<div class="vg-page">
+<div class="projects">
   <div class="container">
-    <h1 class="text-center">See my work</h1>
-    <div class="row gridder">
-      <div class="grid-item">
-        <div
-          class="img-place"
-          data-src="./assets/img/work/work-1.jpg"
-          data-fancybox
-          data-caption="<h5 class='fg-theme'PORTFOLIO WEB</h5> <p>Information, Discovery</p>"
-        >
-          <img [src]="PORTFOLIO" alt="" />
-          <div class="img-caption">
-            <h5 class="fg-theme">PORTFOLIO WEB</h5>
-            <p>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+    <div class="project row">
+      <div
+        class="body col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6"
+        *ngFor="let data of dataPrincipal"
+      >
+        <div class="body-paint">
+          <p class="type">{{ data.type }}</p>
+          <a [href]="data.demo" target="_blank"
+            ><h3>{{ data.name }}</h3>
+          </a>
+          <div class="description">
+            <p>{{ data.description }}</p>
+          </div>
+          <div class="list-tech">
+            <ul *ngFor="let tech of data.tech">
+              <li>{{ tech }}</li>
+            </ul>
+          </div>
+          <div class="projects-links">
+            <a [href]="data.git" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-github"
+              >
+                <title>GitHub</title>
                 <path
-                  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
-                />
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
               </svg>
-              &nbsp; Angular <br />
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            </a>
+            <a [href]="data.demo" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-external-link"
+              >
+                <title>External Link</title>
                 <path
-                  d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
-                />
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-              &nbsp; Portfolio and Personal WEB
-            </p>
+            </a>
           </div>
         </div>
       </div>
-      <!-- <div class="grid-item">
-        <div
-          class="img-place"
-          data-src="../assets/img/work/work-2.jpg"
-          data-fancybox
-          data-caption="<h5 class='fg-theme'>Music App</h5> <p>Musics</p>"
-        >
-          <img [src]="PORTFOLIO" alt="" />
-          <div class="img-caption">
-            <h5 class="fg-theme">Music App</h5>
-            <p>Musics</p>
-          </div>
-        </div>
-      </div> -->
-      <!-- <div class="grid-item">
-        <div
-          class="img-place"
-          data-src="../assets/img/work/work-3.jpg"
-          data-fancybox
-          data-caption="<h5 class='fg-theme'>Gaming Dashboard</h5> <p>Games, Streaming</p>"
-        >
-          <img [src]="PORTFOLIO" alt="" />
-          <div class="img-caption">
-            <h5 class="fg-theme">Gaming Dashboard</h5>
-            <p>Games, Streaming</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div
-          class="img-place"
-          data-src="../assets/img/work/work-4.jpg"
-          data-fancybox
-          data-caption="<h5 class='fg-theme'>Drugs Delivery App</h5> <p>Health, Drugs</p>"
-        >
-          <img [src]="PORTFOLIO" alt="" />
-          <div class="img-caption">
-            <h5 class="fg-theme">Drugs Delivery App</h5>
-            <p>Health, Drugs</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div
-          class="img-place"
-          data-src="../assets/img/work/work-5.jpg"
-          data-fancybox
-          data-caption="<h5 class='fg-theme'>Musics Discover</h5> <p>Musics, Dashboard</p>"
-        >
-          <img [src]="PORTFOLIO" alt="" />
-          <div class="img-caption">
-            <h5 class="fg-theme">Musics Discover</h5>
-            <p>Musics, Dashboard</p>
-          </div>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div
-          class="img-place"
-          data-src="../assets/img/work/work-6.jpg"
-          data-fancybox
-          data-caption="<h5 class='fg-theme'>Game Streaming</h5> <p>Games, Streaming</p>"
-        >
-          <img [src]="PORTFOLIO" alt="" />
-          <div class="img-caption">
-            <h5 class="fg-theme">Game Streaming</h5>
-            <p>Games, Streaming</p>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </div>
-<!-- End Portfolio page -->
