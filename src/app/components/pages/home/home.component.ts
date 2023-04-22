@@ -1,23 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
-  public PROFILE = "./assets/img/eder_rimarachin_profile.png";
-  public ANGULAR = "./assets/img/icon_angular.png";
-  public LARAVEL = "./assets/img/icon_laravel.png";
-  public NET = "./assets/img/icon_net.png";
-  public SQL = "./assets/img/icon_sql.png";
-  public GIT = "./assets/img/icon_git.png";
-  public GITHUB = "./assets/img/icon_github.png";
-  public POSTMAN = "./assets/img/icon_postman.png";
-  public NOTION = "./assets/img/icon_notion.png";
-  public KRAKEN = "./assets/img/icon_gitkraken.png";
-  public PHPSTORM = "./assets/img/icon_phpstorm.png";
-  public VSCODE = "./assets/img/icon_vscode.png";
-  public CV = "./assets/cv/CV_Eder-Rimarachin.pdf";
+export class HomeComponent implements OnInit {
 
+  public PHOTO:string = "/assets/images/me.png"
+
+  constructor(private router: Router, private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        const element = document.querySelector(`#${fragment}`);
+        if (element) { element.scrollIntoView({ behavior: 'smooth' }); }
+      }
+    });
+  }
+
+  ngAfterViewInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        const fragment = this.router.parseUrl(this.router.url).fragment;
+        if (fragment) {
+          setTimeout(() => {
+            this.navigateToSection(fragment);
+          }, 500); // Delay for some time to allow the view to render
+        }
+      }
+    });
+  }
+  navigateToSection(fragment: string): void {
+    const element = document.querySelector(`#${fragment}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

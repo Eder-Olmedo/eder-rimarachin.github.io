@@ -1,10 +1,7 @@
-
-/* You can add global styles to this file, and also import other style files */
 :root {
-  --fontFamily1: "Signika", Arial, Helvetica, sans-serif;
-  --fontFamily2: "Urwdin", Arial, Helvetica, sans-serif;
-  --fontFamily3: "Anton", Arial, Helvetica, "sans-serif";
-  --fontFamily4: "Source Code Pro", monospace;
+  --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --primary-color: #14b789;
   --violet-color: #9f00ff;
   --violet-secondary: #e0adff;
@@ -12,33 +9,59 @@
   --white-color: #fff;
   --green-color: #23989e;
   --white-ligth-color: #f0f8ff;
-  --black: #171925;
-  --gray: #f4f4f7;
-  --orange-color: #f49f0a;
-  --tangerine-color: #f08700;
-  --sea-ligth-color: #14b789;
-  --surface-color: #fff;
-  --curve: 40;
-  --border-radius-large: 100px;
-  --border-radius-medium: 20px;
-  --border-radius-small: 10px;
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
+  --black: #0a0b0e;
+  --gray-dark: #8a9aac;
+  --gray-light: #edf2f7;
+  --gray2: rgb(30, 30, 30);
+  --blue: #0d203b;
+  --green: #64ffda;
+  --bs-green: #20c9963e;
+  --dark-navy: #020c1b;
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --navy-shadow: rgba(2, 12, 27, 0.7);
 }
 
 * {
-  font-family: var(--fontFamily);
-  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html,
 body {
-  background-color: var(--whiteColor);
-  padding: 0;
-  margin: 0;
-  min-width: 250px;
+  color: white;
+  background-color: #1c1b32;
+  font-family: Lato, var(--font-mono);
+  font-size: 18px;
+  height: 100%;
+  background-color: var(--blue);
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 a {
   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-dark);
+  border-radius: 20px;
+  border: 2px solid var(--blue);
+}
+
+::-webkit-scrollbar:vertical {
+  width: 12px;
 }

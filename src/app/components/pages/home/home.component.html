@@ -1,187 +1,71 @@
-<div class="presentation">
-  <div class="container">
-    <div class="row card cardProfile">
-      <div class="col-sm-4 col-lg-4 imfProfile">
-        <img class="img-fluid" [src]="PROFILE" alt="Eder-Joaquin" />
+<main class="container" id="home">
+  <div class="container-fluid w-100 px-1 px-sm-4 px-md-5 px-lg-5 px-lg-5">
+    <div class="row px-0 mx-0">
+      <div class="col-md-12">
+        <h1>Hola, mi nombre es</h1>
       </div>
-      <div class="col">
-        <div class="card-body">
-          <h1 class="card-title">Eder Rimarachin</h1>
-          <h4>
-            <i><b>Web Developer</b></i>
-          </h4>
-          <p class="card-text">
-            I enjoy learning new technologies and currently have found a niche
-            in Frontend and Backend development, with the idea of ​​becoming a
-            Full Stack developer in the medium term. Technologies that I usually
-            handle: in Front End: Angular and Ionic and for the Backend in Net
-            Core, Java and PHP.
-          </p>
-        </div>
+      <div class="col-md-12">
+        <h2 class="display-4">Eder Rimarachin.</h2>
+      </div>
+      <div class="col-md-12">
+        <h3 class="display-4">Construyo Web desde lo visual a lo lógico.</h3>
+      </div>
+      <div class="col-md-12">
+        <p class="display-5 display-sm-2 display-md-4 display-lg-4">
+          Soy un ingeniero de software que se especializa en crear (y
+          ocasionalmente diseñar) experiencias digitales excepcionales.
+          Actualmente, me centro en la creación de productos accesibles y
+          centrados en el ser humano.
+        </p>
       </div>
     </div>
   </div>
-</div>
+</main>
 
-<!-- CARDS -->
-<section class="bodyCard">
-  <div class="container cardsInfo">
-    <div class="card about-me">
-      <div class="row">
-        <div class="card-body col-sm-6">
-          <h5 class="card-title">About me</h5>
-          <p class="card-text">
-            Graduated from Systems Engineering at the Pedro Ruiz Gallo National
-            University - Lambayeque - Peru, I work as a web developer with
-            technologies such as Net Core, Angular, however I consider myself
-            passionate about learning and technologies, I like to solve problems
-            and face new challenges.
-          </p>
-        </div>
-        <div class="card-body col-sm-6">
-          <h1 class="fw-light title-about"><em>Eder Rimarachin</em></h1>
-          <h5 class="fg-theme mb-3">Web Developer</h5>
-          <p class="text-muted"></p>
-          <ul class="theme-list">
-            <li><b>From:</b> Cajamarca, Perú</li>
-            <li><b>Lives In:</b> Lambayeque, Perú</li>
-            <li><b>Age:</b> 24</li>
-            <li><b>Gender:</b> Male</li>
-          </ul>
-          <button class="btn btn-theme-outline btnCV">
-            <a [href]="CV" download> <span>Download CV</span> </a>
-          </button>
-        </div>
+<main class="container" id="about">
+  <div
+    class="conatiner-fluid about-me px-1 px-sm-4 px-md-5 px-lg-5 px-lg-5"
+  >
+    <div class="row row-12 title-about">
+      <div class="col-auto numeral">01.</div>
+      <div class="col-auto n-tittle"><h2>&nbsp;Sobre mí</h2></div>
+      <div class="col-auto line">
+        <div class="line-box"></div>
       </div>
     </div>
-    <div class="card">
-      <div class="row">
-        <div class="card-body">
-          <h5 class="card-title">Skills</h5>
-          <div class="card-text">
-            <ul>
-              <li>Autodidact</li>
-              <li>
-                Excellent collaboration and teamwork: ability to work
-                cross-sectionally
-              </li>
-              <li>Ease of learning new languages and technologies.</li>
-              <li>Knowledge in agile development - SCRUM</li>
-              <li>API development / integration experience</li>
-              <li>Control de versiones: Git, Github - GitFlow</li>
-            </ul>
+    <div class="row body-about justify-content-center">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 body-text">
+        <p>
+          ¡Hola! Mi nombre es Eder y disfruto creando cosas que duran La
+          Internet. Mi interés en el desarrollo web comenzó en 2017 cuando
+          Decidí usar trucos para mis juegos favoritos.
+        </p>
+        <p>
+          Antes de dedicarme de lleno a la programación tuve que aprender
+          habilidades blandas para poder estar en este mundo competitivo.
+        </p>
+        <p>
+          Ahora, estoy desarrollando un Clone de Instagram usando Nodejs &
+          Angular.
+        </p>
+        <p>Aquí algunas tecnologías que tratado recietemente:</p>
+        <ul class="">
+          <li>JavaScript (ES6+)</li>
+          <li>Angular 14</li>
+          <li>Node.js</li>
+          <li>TypeScript</li>
+          <li>MongoDB</li>
+        </ul>
+      </div>
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-6 body-photo">
+        <div class="photo">
+          <div>
+            <img [src]="PHOTO" alt="me" />
+            <div class="wrapper"></div>
+            <div class="border-warper"></div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row card tech">
-      <div class="col-sm-6 col-lg-6 card-body techCard">
-        <h5 class="card-title">Technical ability</h5>
-        <div class="bTech">
-          <ul
-            class="nav nav-pills flex-column flex-sm-row justify-content-center"
-          >
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="ANGULAR" alt="img_Angular" title="Angular" />
-                <strong class="">
-                  <span>Angular</span>
-                </strong>
-              </div>
-            </li>
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="LARAVEL" alt="img_Laravel" title="Laravel" />
-                <strong class="">
-                  <span>Laravel</span>
-                </strong>
-              </div>
-            </li>
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="NET" alt="img_Net-Core" title="Net Core" />
-                <strong class="">
-                  <span>Net Core</span>
-                </strong>
-              </div>
-            </li>
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="SQL" alt="img_SQL-Server" title="SQL Server" />
-                <strong class="">
-                  <span> SQL Server </span>
-                </strong>
-              </div>
-            </li>
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="GIT" alt="img_Git" title="Git" />
-                <strong class="">
-                  <span>Git</span>
-                </strong>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-lg-6 card-body techCard">
-        <h5 class="card-title">Kit</h5>
-        <div class="bTech">
-          <ul
-            class="nav nav-pills flex-column flex-sm-row justify-content-center"
-          >
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="GITHUB" alt="img_Github" title="Github" />
-                <strong class="d-block">
-                  <span>Github</span>
-                </strong>
-              </div>
-            </li>
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="POSTMAN" alt="img_Postman" title="Postman" />
-                <strong class="d-block">
-                  <span>Postman</span>
-                </strong>
-              </div>
-            </li>
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="NOTION" alt="img_Notion" title="Notion" />
-                <strong class="d-block">
-                  <span>Notion</span>
-                </strong>
-              </div>
-            </li>
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="KRAKEN" alt="img_GitKraken" title="GitKraken" />
-                <strong class="d-block">
-                  <span> Git Kraken </span>
-                </strong>
-              </div>
-            </li>
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="PHPSTORM" alt="img_PhpStorm" title="PhpStorm" />
-                <strong class="d-block">
-                  <span>Php Storm</span>
-                </strong>
-              </div>
-            </li>
-            <li class="nav-item ml-2 mr-2">
-              <div class="card cTech">
-                <img [src]="VSCODE" alt="img_VSCode" title="VSCode" />
-                <strong class="d-block">
-                  <span>VS Code</span>
-                </strong>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
-</section>
+</main>

@@ -1,76 +1,10 @@
 footer {
-  background-color: var(--violet-color) !important;
-  color: var(--white-color) !important;
-  section {
-    .socialBox {
-      display: flex;
-      flex-direction: row;
-      margin: 0 auto;
-      a {
-        display: flex;
-
-        picture {
-          border-radius: 50%;
-          background-color: white;
-          padding: 10px;
-          margin: 5px;
-          svg {
-            width: 30px;
-            height: 30px;
-
-            path {
-              fill: var(--violet-color);
-            }
-          }
-
-          &:hover,
-          &:focus {
-            background-color: var(--black);
-          }
-        }
-      }
-    }
-  }
-  .linkAccess {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    div {
-      div {
-        div {
-          p {
-            a {
-              font-weight: bold;
-              text-decoration: none;
-              &:hover,
-              &:focus {
-                color: var(--black) !important;
-              }
-            }
-          }
-        }
-        .logo_box {
-          display: flex;
-          margin: 0 auto;
-          justify-content: center;
-          vertical-align: middle;
-          a {
-            
-           
-            .logo_img {
-              width: 100px;
-              height: 100px;
-              filter: invert(1);
-            }
-          }
-        }
-      }
-    }
-  }
+  background-color: var(--blue);
+  color: var(--green);
+  width: 100%;
 
   .copy {
     font-weight: bold;
     padding: 20px 0;
-    background-color: var(--black);
   }
 }
