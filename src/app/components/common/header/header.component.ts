@@ -24,4 +24,11 @@ export class HeaderComponent {
       this.isFixedTop = true;
     }
   }
+
+  openPdf() {
+    window.open(
+      "./assets/cv/CV_Eder-Rimarachin_Software-Engineer_pw.pdf",
+      "_blank"
+    );
+  }
 }
