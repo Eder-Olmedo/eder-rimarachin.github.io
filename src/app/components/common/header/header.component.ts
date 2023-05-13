@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener } from "@angular/core";
+import { Component, ElementRef } from "@angular/core";
 
 @Component({
   selector: "app-header",
@@ -15,15 +15,6 @@ export class HeaderComponent {
 
   constructor(private elementRef: ElementRef) {}
 
-  @HostListener("window:scroll", [])
-  onWindowScroll() {
-    const navbar = this.elementRef.nativeElement.querySelector(".navbar");
-    if (window.pageYOffset > navbar.offsetTop) {
-      this.isFixedTop = false;
-    } else {
-      this.isFixedTop = true;
-    }
-  }
 
   openPdf() {
     window.open(

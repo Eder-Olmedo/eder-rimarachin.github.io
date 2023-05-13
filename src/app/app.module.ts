@@ -9,6 +9,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { EducationComponent } from './components/pages/education/education.component';
 import { ProjectsComponent } from './components/pages/projects/projects.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoaderComponent } from './components/common/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     EducationComponent,
     ProjectsComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
