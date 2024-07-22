@@ -7,6 +7,9 @@ import {
   FaDatabase,
   FaAngular,
   FaArrowUp,
+  FaLinkedin,
+  FaGithub,
+  FaDownload,
 } from "react-icons/fa"; // Ejemplo con react-icons
 
 import { BiLogoTypescript } from "react-icons/bi";
@@ -38,7 +41,11 @@ function App() {
     // Fetch JSON data
     fetch("/data.json")
       .then((response) => response.json())
-      .then((data) => setCards(data))
+      .then((data) => {
+        // Ordenar las tarjetas por id en orden descendente
+        const sortedData = data.sort((a: CardData, b: CardData) => b.id - a.id);
+        setCards(sortedData);
+      })
       .catch((error) => console.error("Error fetching data:", error));
 
     // Handle scroll event
@@ -61,15 +68,21 @@ function App() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/CV_EDER_RIMRARCHIN.pdf"; // URL del archivo en la carpeta public
+    link.download = "CV_EDER_RIMRARCHIN.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       {/* section 1 */}
-      <div
-        id="section1"
-        className="flex items-center flex-col w-full min-h-screen h-full"
-      >
-        <div className="w-full bg-white h-2/5 p-0 text-black flex flex-col justify-end items-center">
-          <div className="flex flex-col items-center relative z-10 transform translate-y-1/2">
+      <div id="section1" className="flex items-center flex-col w-full h-screen">
+        <div className="w-full bg-white h-2/5  text-black flex flex-col justify-end items-center">
+          <div className="flex flex-col items-center relative z-100 transform translate-y-1/2">
             <img
               className="rounded-full object-cover w-48 h-48 border-2 border-black object-bottom"
               src="/profile.jpg"
@@ -81,21 +94,89 @@ function App() {
           </div>
         </div>
 
-        <div className="w-full bg-blue-600 h-3/5 p-0 text-white flex flex-col justify-end items-center">
-          <div className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-            <p className="text-justify">
-              Hola, soy Eder, Desarrollador Full Stack ☕. Me especializo en
-              tecnologías Backend, que son mi verdadera pasión. Disfruto
-              aprendiendo nuevas tecnologías y expandiendo mis conocimientos
-              continuamente.
-            </p>
-            <br />
-            <p className="font-normal text-white dark:text-white italic">
-              "Si puedes imaginarlo, puedes programarlo..."
-            </p>
-            <h5 className="mb-2 font-bold tracking-tight text-right text-gray-900 dark:text-white">
-              Programación ATS
-            </h5>
+        <div className="w-full bg-blue-600 h-full p-0 text-white flex flex-col justify-end items-center">
+          <div className="w-full h-full flex flex-col items-center  ">
+            <div className="w-full h-8 bg-gray-800 py-8  flex flex-row justify-between items-center">
+              <div className="mx-1">
+                <nav className="bg-gray-800 text-white ">
+                  <ul className="flex flex-row space-x-4 relative z-200">
+                    <li className="mx-1 cursor-pointer">
+                      <a href="#section2" className="hover:underline">
+                        Sobre Mí
+                      </a>
+                    </li>
+                    <li className="mx-1 cursor-pointer hidden md:block">
+                      <a href="#section3" className="hover:underline ">
+                        Experiencia
+                      </a>
+                    </li>
+                    <li className="mx-1 cursor-pointer">
+                      <a href="#section4" className="hover:underline">
+                        Proyectos
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div className="mx-2">
+                <ul className="flex flex-row space-x-4 relative z-200">
+                  {/* LinkedIn */}
+                  <li
+                    className="flex items-center space-x-2 cursor-pointer"
+                    title="Ver LinkedIn"
+                  >
+                    <FaLinkedin className="text-blue-700" size={24} />
+                    <a
+                      href="https://www.linkedin.com/in/eder-rimarachinr/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:underline"
+                    >
+                      LinkedIn
+                    </a>
+                  </li>
+
+                  {/* GitHub */}
+                  <li
+                    className="items-center space-x-2 cursor-pointer hidden md:flex"
+                    title="Ver GitHub"
+                  >
+                    <FaGithub className="text-white" size={24} />
+                    <a
+                      href="https://github.com/eder-rimarachinr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-500 hover:underline"
+                      title="GitHub"
+                    ></a>
+                  </li>
+
+                  {/* CV Download */}
+                  <li
+                    className="flex items-center space-x-2 cursor-pointer"
+                    title="Descargar CV"
+                    onClick={handleDownload}
+                  >
+                    <FaDownload className="text-green-500" size={24} />
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="block max-w-sm p-6 mt-28 mb-16 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+              <p className="text-justify">
+                Hola, soy Eder, Desarrollador Full Stack ☕. Me especializo en
+                tecnologías Backend, que son mi verdadera pasión. Disfruto
+                aprendiendo nuevas tecnologías y expandiendo mis conocimientos
+                continuamente.
+              </p>
+              <br />
+              <p className="font-normal text-white dark:text-white italic">
+                "Si puedes imaginarlo, puedes programarlo..."
+              </p>
+              <h5 className="mb-2 font-bold tracking-tight text-right text-gray-900 dark:text-white">
+                Programación ATS
+              </h5>
+            </div>
           </div>
         </div>
       </div>
@@ -103,9 +184,9 @@ function App() {
       {/* section 2 */}
       <div
         id="section2"
-        className="bg-default flex items-center flex-col w-full min-h-screen "
+        className="bg-default flex items-center flex-col w-full min-h-screen"
       >
-        <div className="p-8 pt-20 w-3/5">
+        <div className="p-8 pt-20 w-4/5">
           <h3 className="text-left text-white text-2xl font-bold">Sobre Mì</h3>
           <hr className="border-t border-gray-300 my-4" />
           <p className="text-white pt-4 text-justify">
@@ -234,7 +315,7 @@ function App() {
         id="section3"
         className="bg-violet-700 flex items-center flex-col w-full min-h-screen "
       >
-        <div className="p-8 pt-20 w-3/5">
+        <div className="p-8 pt-20 w-4/5">
           <h3 className="text-left text-white text-2xl font-bold">
             Experiencia
           </h3>
@@ -355,7 +436,7 @@ function App() {
         id="section4"
         className="bg-white flex items-center flex-col w-full min-h-screen "
       >
-        <div className="p-8 pt-20 w-3/5">
+        <div className="p-8 pt-20 w-4/5">
           <h3 className="text-left text-black text-2xl font-bold">Proyectos</h3>
           <hr className="border-t border-gray-300 my-4" />
           <p className="text-justify">

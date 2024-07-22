@@ -14,3 +14,8 @@
 .bg-violet-light {
   background-color: #1409b9;
 }
+
+.mt-neg {
+  margin-top: -20px !important;
+  padding-top: -20px !important;
+}
