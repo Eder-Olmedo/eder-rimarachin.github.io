@@ -122,16 +122,16 @@ function App() {
                 <ul className="flex flex-row space-x-4 relative z-200">
                   {/* LinkedIn */}
                   <li
-                    className="flex items-center space-x-2 cursor-pointer"
+                    className="flex items-center  cursor-pointer"
                     title="Ver LinkedIn"
                   >
-                    <FaLinkedin className="text-blue-700" size={24} />
                     <a
                       href="https://www.linkedin.com/in/eder-rimarachinr/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-white hover:underline"
+                      className="text-white hover:underline space-x-2 flex flex-row cursor-pointer"
                     >
+                      <FaLinkedin className="text-blue-700 mr-1" size={24} />
                       LinkedIn
                     </a>
                   </li>
@@ -141,14 +141,15 @@ function App() {
                     className="items-center space-x-2 cursor-pointer hidden md:flex"
                     title="Ver GitHub"
                   >
-                    <FaGithub className="text-white" size={24} />
                     <a
                       href="https://github.com/eder-rimarachinr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-pink-500 hover:underline"
                       title="GitHub"
-                    ></a>
+                    >
+                      <FaGithub className="text-white" size={24} />
+                    </a>
                   </li>
 
                   {/* CV Download */}
