@@ -6,7 +6,6 @@ import {
   FaReact,
   FaDatabase,
   FaAngular,
-  FaArrowUp,
   FaLinkedin,
   FaGithub,
   FaDownload,
@@ -14,9 +13,11 @@ import {
 
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiSequelize, SiCsharp } from "react-icons/si";
-import { MdOpenInNew } from "react-icons/md";
 
 import { useEffect, useState } from "react";
+import Pagination from "./components/Pagination";
+import ProjectCard from "./components/ProjectCard";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 interface CardData {
   id: number;
@@ -30,8 +31,10 @@ interface CardData {
 
 function App() {
   const [cards, setCards] = useState<CardData[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [showButton, setShowButton] = useState<boolean>(false);
 
   const handleToggle = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -47,26 +50,7 @@ function App() {
         setCards(sortedData);
       })
       .catch((error) => console.error("Error fetching data:", error));
-
-    // Handle scroll event
-    const handleScroll = () => {
-      const secondSectionTop = window.innerHeight; // Top of the second section
-      const currentScroll = window.scrollY;
-
-      if (currentScroll >= secondSectionTop) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []); // Empty dependency array means this runs once when component mounts
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -76,6 +60,13 @@ function App() {
     link.click();
     document.body.removeChild(link);
   };
+
+  // Calcular los índices de los elementos para la página actual
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = cards.slice(indexOfFirstItem, indexOfLastItem);
+
+  const totalPages = Math.ceil(cards.length / itemsPerPage);
 
   return (
     <>
@@ -447,55 +438,35 @@ function App() {
           </p>
           <br />
 
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
+          <br />
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto text-center">
-            {cards.map((card) => (
-              <div
-                className="max-w-sm rounded overflow-hidden shadow-lg"
+            {currentItems.map((card) => (
+              <ProjectCard
                 key={card.id}
-              >
-                <img
-                  className="w-full"
-                  src={card.img}
-                  alt="Sunset in the mountains"
-                ></img>
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2 ">
-                    <a
-                      href={card.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-500 hover:underline flex flex-row justify-center items-center"
-                    >
-                      {card.title}
-                      <MdOpenInNew />
-                    </a>
-                  </div>
-                  <p className="text-gray-700 text-base">{card.description}</p>
-                </div>
-                <div className="px-6 pt-4 pb-2">
-                  {card.tech.map((technology, index) => (
-                    <span
-                      key={index}
-                      className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-                    >
-                      #{technology}
-                    </span>
-                  ))}
-                </div>
-              </div>
+                img={card.img}
+                link={card.link}
+                title={card.title}
+                description={card.description}
+                tech={card.tech}
+              />
             ))}
           </div>
+
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
         </div>
       </div>
 
-      {showButton && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
-        >
-          <FaArrowUp size={24} />
-        </button>
-      )}
+      <ScrollToTopButton threshold={200} />
     </>
   );
 }
