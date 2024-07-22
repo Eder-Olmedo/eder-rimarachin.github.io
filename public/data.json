@@ -25,5 +25,23 @@
     "link": "https://convert-string-to-json.netlify.app/",
     "tech": ["JavaScript"],
     "img": "/py-3.png"
+  },
+  {
+    "id": 4,
+    "type": "Destacado",
+    "title": "La Granja Villa",
+    "description": "Proyecto Inicial en plazti, para entender el funcionamiento de eventos con javascript y dibujado en canva.",
+    "link": "https://eder-rimarachinr.github.io/VillaZeta/",
+    "tech": ["JavaScript", "Canva"],
+    "img": "/py-4.png"
+  },
+  {
+    "id": 5,
+    "type": "Destacado",
+    "title": "Cajero",
+    "description": "Proyecto Inicial, para entender el funcionamiento de eventos con javascript, que simula un cajero y el retiro unicamente de billetes limitados a ciertas numeraciones.",
+    "link": "https://eder-rimarachinr.github.io/CajeroPER/",
+    "tech": ["JavaScript", "Canva"],
+    "img": "/py-5.png"
   }
 ]
