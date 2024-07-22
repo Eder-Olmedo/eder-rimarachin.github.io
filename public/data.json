@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 5,
     "type": "Destacado",
     "title": "Portafolio",
     "description": "Portafolio que describe quien soy y en que me desenvuelvo como profesional mostrando mis habilidades, proyectos y cerificaciones.",
@@ -9,7 +9,7 @@
     "img": "/py-1.png"
   },
   {
-    "id": 2,
+    "id": 4,
     "type": "Destacado",
     "title": "ToDo List",
     "description": "Una lista que registra tareas, actualiza y cambia el estado de esta, para poder tener un control sobre lo que hacemos, usando persistencia de datos con el LocalStorage.",
@@ -27,7 +27,7 @@
     "img": "/py-3.png"
   },
   {
-    "id": 4,
+    "id": 2,
     "type": "Destacado",
     "title": "La Granja Villa",
     "description": "Proyecto Inicial en plazti, para entender el funcionamiento de eventos con javascript y dibujado en canva.",
@@ -36,7 +36,7 @@
     "img": "/py-4.png"
   },
   {
-    "id": 5,
+    "id": 1,
     "type": "Destacado",
     "title": "Cajero",
     "description": "Proyecto Inicial, para entender el funcionamiento de eventos con javascript, que simula un cajero y el retiro unicamente de billetes limitados a ciertas numeraciones.",
