@@ -1,0 +1,16 @@
+#root {
+  /* max-width: 1280px; */
+  max-width: auto;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+  height: 100dvh;
+}
+
+.bg-default {
+  background-color: #112240;
+}
+
+.bg-violet-light {
+  background-color: #1409b9;
+}

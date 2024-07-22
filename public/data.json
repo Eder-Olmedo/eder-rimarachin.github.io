@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "type": "Destacado",
+    "title": "Portafolio",
+    "description": "Portafolio que describe quien soy y en que me desenvuelvo como profesional mostrando mis habilidades, proyectos y cerificaciones.",
+    "link": "https://eder-rimarachin.netlify.app/#/home",
+    "tech": ["React", "Tailwindcss"],
+    "img": "/py-1.png"
+  },
+  {
+    "id": 2,
+    "type": "Destacado",
+    "title": "ToDo List",
+    "description": "Una lista que registra tareas, actualiza y cambia el estado de esta, para poder tener un control sobre lo que hacemos, usando persistencia de datos con el LocalStorage.",
+    "link": "https://react-todo-list-jz.netlify.app/",
+    "tech": ["JavaScript", "LocalStorage"],
+    "img": "/py-2.png"
+  }
+]
