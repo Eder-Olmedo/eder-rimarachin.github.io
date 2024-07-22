@@ -16,5 +16,14 @@
     "link": "https://react-todo-list-jz.netlify.app/",
     "tech": ["JavaScript", "LocalStorage"],
     "img": "/py-2.png"
+  },
+  {
+    "id": 3,
+    "type": "Destacado",
+    "title": "ToDo ff List",
+    "description": "Una lista que registra tareas, actualiza y cambia el estado de esta, para poder tener un control sobre lo que hacemos, usando persistencia de datos con el LocalStorage.",
+    "link": "https://react-todo-list-jz.netlify.app/",
+    "tech": ["JavaScript", "LocalStorage"],
+    "img": "/py-2.png"
   }
 ]
