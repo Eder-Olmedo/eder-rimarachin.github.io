@@ -72,7 +72,7 @@ function App() {
           <div className="flex flex-col items-center relative z-10 transform translate-y-1/2">
             <img
               className="rounded-full object-cover w-48 h-48 border-2 border-black object-bottom"
-              src="./../src/assets/images/profile.jpg"
+              src="/profile.jpg"
               alt="profile"
             />
             <p className="text-white font-bold text-4xl mt-2">
