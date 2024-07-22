@@ -16,5 +16,14 @@
     "link": "https://react-todo-list-jz.netlify.app/",
     "tech": ["JavaScript", "LocalStorage"],
     "img": "/py-2.png"
+  },
+  {
+    "id": 3,
+    "type": "Destacado",
+    "title": "Converter Json String To Json",
+    "description": "Se construyó devido a que otros formateadores, no lograban convertir una json string a json correctamente.",
+    "link": "https://convert-string-to-json.netlify.app/",
+    "tech": ["JavaScript"],
+    "img": "/py-3.png"
   }
 ]
