@@ -1,5 +1,14 @@
 [
   {
+    "id": 6,
+    "type": "Destacado",
+    "title": "DBZ - App",
+    "description": "Aplicación realizada con Flutter, la cual consume una api de Dragon Ball y muestra tanto personajes con sus tranformaciones y planetas con los personajes de este",
+    "link": "https://github.com/eder-rimarachinr/dragon_ball_flutter_app",
+    "tech": ["Flutter"],
+    "img": "/dbz-1.png"
+  },
+  {
     "id": 5,
     "type": "Destacado",
     "title": "Portafolio",
