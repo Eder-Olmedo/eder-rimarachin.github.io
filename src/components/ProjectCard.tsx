@@ -19,7 +19,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
-      <img className="w-full" src={img} alt={title} />
+      {/* <img className="w-full h-40" src={img} alt={title} /> */}
+      <div className="w-full h-40 bg-cover bg-center" style={{ backgroundImage: `url(${img})` }}>
+        <span className="sr-only">{title}</span>
+      </div>
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">
           <a
